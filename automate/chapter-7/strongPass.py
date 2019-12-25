@@ -1,4 +1,4 @@
-#python3
+#! python3
 # strongPass.py
 # testing strength of password detection.
 
