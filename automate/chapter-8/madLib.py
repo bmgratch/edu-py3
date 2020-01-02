@@ -4,7 +4,11 @@
 import os, sys, re
 
 # Generate mad lib regex
-madLibRegex = re.compile(r'(\WNOUN\W)|(\WADJECTIVE\W)|(\WVERB\W)|(\WADVERB\W)')
+madLibRegex = re.compile(r'((NOUN)|(ADJECTIVE)|(VERB)|(ADVERB))')
+nounRegex = re.compile(r'\WNOUN')
+adjRegex = re.compile(r'\WADJECTIVE')
+verbRegex = re.compile(r'\WVERB')
+advRegex = re.compile(r'\WADVERB')
 
 # Get the data from the file
 if len(sys.argv) != 2:
@@ -16,10 +20,12 @@ else:
     ml = mlFile.read()
 
 # TODO Regex search the file for CAPS text
-
-
-# TODO Get input from user
-
-# TODO Replace using Regex
-
+while True:
+    libRep = madLibRegex.search(ml)
+    if 
+    print("Enter a " + libRep.group().lower())
+    rep = input()
+    ml = madLibRegex.sub(rep, ml, 1)
+    print(ml)
+    
 # TODO Save to new file
