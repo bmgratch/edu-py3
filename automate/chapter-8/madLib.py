@@ -5,10 +5,6 @@ import os, sys, re
 
 # Generate mad lib regex
 madLibRegex = re.compile(r'((NOUN)|(ADJECTIVE)|(VERB)|(ADVERB))')
-#nounRegex = re.compile(r'\WNOUN')      # THESE were unneeded.
-#adjRegex = re.compile(r'\WADJECTIVE')
-#verbRegex = re.compile(r'\WVERB')
-#advRegex = re.compile(r'\WADVERB')
 
 # Get the data from the file
 if len(sys.argv) != 2:
@@ -22,13 +18,17 @@ else:
 # TODO Regex search the file for CAPS text
 while True:
     libRep = madLibRegex.search(ml)
-    #I need a try: exeption: clause here
-    print("Enter a " + libRep.group().lower())
-    rep = input()
-    ml = madLibRegex.sub(rep, ml, 1)
-    print(ml)
+    #try/except here to break when completed
+    try:
+        print("Enter a " + libRep.group().lower())
+        rep = input()
+        ml = madLibRegex.sub(rep, ml, 1)
+        print(ml)
+    except AttributeError:
+        break
     
-# TODO Save to new file, needs testing
-madLibComplete = open(f'MadLib_new.txt', 'w') #makes the file
-madLibComplete.write(ml)                      # this should be done!
-madLibComplete.close()                      #close file
+# Save to new file, madlib_FILE.txt
+madLibComplete = open(f'madlib_{str(sys.argv[1])}' , 'w') #makes the file
+madLibComplete.write(ml)            # this should be done!
+madLibComplete.close()              #close file
+mlFile.close()
