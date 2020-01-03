@@ -23,9 +23,9 @@ while True:
         print("Enter a " + libRep.group().lower())
         rep = input()
         ml = madLibRegex.sub(rep, ml, 1)
-        print(ml)
     except AttributeError:
         break
+print(ml)
     
 # Save to new file, madlib_FILE.txt
 madLibComplete = open(f'madlib_{str(sys.argv[1])}' , 'w') #makes the file
