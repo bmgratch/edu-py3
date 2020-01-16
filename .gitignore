@@ -1,4 +1,6 @@
 
-*.md
+exercism/__pycache__
+/exercism/*/__pycache__
+/exercism/python/*/.exercism
 *.pyc
 *.md
