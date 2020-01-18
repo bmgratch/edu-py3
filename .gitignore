@@ -4,3 +4,4 @@ exercism/__pycache__
 /exercism/python/*/.exercism
 *.pyc
 *.md
+exercism/python/*/*_test.py
