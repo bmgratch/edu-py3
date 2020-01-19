@@ -1,9 +1,18 @@
 class Matrix:
     def __init__(self, matrix_string):
-        pass
+        self.matrix_string = matrix_string   
+        self.rows = self.matrix_string.split('\n')
+        for x in range(0, len(self.rows)):
+            n = []
+            for i in self.rows[x].split():
+                n.append(int(i))
+            self.rows[x] = n
 
     def row(self, index):
-        pass
+        return self.rows[index - 1]
 
     def column(self, index):
-        pass
+        col = []
+        for x in self.rows:
+            col.append(x[index-1])
+        return col
