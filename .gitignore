@@ -5,3 +5,4 @@ exercism/__pycache__
 *.pyc
 *.md
 exercism/python/*/*_test.py
+*.xlsx
