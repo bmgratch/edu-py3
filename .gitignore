@@ -6,3 +6,4 @@ exercism/__pycache__
 *.md
 exercism/python/*/*_test.py
 *.xlsx
+automate/automate_online-materials/zophie.png
