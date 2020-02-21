@@ -7,3 +7,4 @@ exercism/__pycache__
 exercism/python/*/*_test.py
 *.xlsx
 automate/automate_online-materials/*
+*.pyc
