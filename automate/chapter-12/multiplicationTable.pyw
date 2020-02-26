@@ -11,8 +11,9 @@ else:
     n = 0
 
 # Open a sheet
-mTable = openpyxl.load_workbook('multipliation-table-%s.xlsx' % n, 'w')
-sheet = wb.active
+mTable = openpyxl.Workbook()
+sheet = mTable.active
+sheet.title = 'Multiplication %s' % n
 
 # TODO create the table
 # TODO N wide by N down
@@ -20,4 +21,4 @@ for val in range(1, n):
     sheet.cell(row = 1, column = val + 1).value = val
 
 # saving:
-wb.save('multiplication-table-%s.xlsx' % n)
+mTable.save('multiplication-table-%s.xlsx' % n)
