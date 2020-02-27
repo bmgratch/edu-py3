@@ -13,8 +13,22 @@ else:
     print("Proper Usage: blankRowInserter.py (row) (blanks) (file.xlsx)")
     sys.exit()
 
-# TODO Open file
+# Open file
+wb = openpyxl.load_workbook(file)
+sheet = wb.active
+wb2 = openpyxl.Workbook()
+sheet2 = wb2.active
+sheet2.title = sheet.title #copy sheet title, why not
 
-# TODO add blanks
+# TODO copy rows, add blanks
+for row in range(1, sheet.max_row +1):
+    if row < startRow:
+        #copy to row
+        pass
+    else:
+        #copy to row + blankRow
+        pass
 
-# TODO save file
+# Save file as file_new.xlsx
+
+wb2.save('%s_new.xlsx' % file)
