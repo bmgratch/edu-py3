@@ -1,11 +1,10 @@
 def is_isogram(string):
-    iso = ''
+    iso = []
     for c in string.lower():
-        if not c.isalpha():
-            continue
-        elif c not in iso:
-            iso += c
-        else:
-            return False
+        if c.isalpha():
+            if c not in iso:
+                iso.append(c)
+            else:
+                return False
     return True
 
