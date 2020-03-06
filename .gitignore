@@ -9,3 +9,4 @@ exercism/python/*/*_test.py
 automate/automate_online-materials/*
 *.pyc
 *.pdf
+automate/*/test.py
