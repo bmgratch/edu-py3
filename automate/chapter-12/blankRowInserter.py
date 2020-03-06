@@ -26,13 +26,6 @@ sheet2 = wb2.active
 sheet2.title = sheet.title #copy sheet title, why not
 
 # TODO copy rows, add blanks
-for row in range(1, sheet.max_row):
-    if row < startRow:
-        #copy to row
-        pass
-    else:
-        #copy to row + blankRow
-        pass
 
 # Save file as file_new.xlsx
 
