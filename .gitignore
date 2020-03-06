@@ -10,3 +10,4 @@ automate/automate_online-materials/*
 *.pyc
 *.pdf
 automate/*/test.py
+*.docx
