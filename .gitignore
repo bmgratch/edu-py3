@@ -11,3 +11,4 @@ automate/automate_online-materials/*
 *.pdf
 automate/*/test.py
 *.docx
+exercism/python/*/__pycache__/*
