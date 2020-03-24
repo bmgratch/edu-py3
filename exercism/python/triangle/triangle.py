@@ -18,9 +18,6 @@ def scalene(sides):
         return False
 
 def valid_triangle(sides):
-    print(len(sides) != 3)
-    print(sides[-1] > sides[0] + sides[1])
-    print(sides[0] <= 0)
     if len(sides) != 3 or sides[-1] > (sides[0] + sides[1]) or sides[0] <= 0:
         return False
     return True
