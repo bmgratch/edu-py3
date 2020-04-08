@@ -18,7 +18,7 @@ try:
         lapTime = round(time.time() - lastTime, 2)
         totalTime = round(time.time() - startTime, 2)
 
-        print(('Lab #%s:' % lapNum).ljust(8), str(totalTime).rjust(5) + ' (', str(lapTime).rjust(4)+ ')')
+        print(('Lap #%s:' % lapNum).ljust(8), str(totalTime).rjust(5) + ' (', str(lapTime).rjust(4)+ ')', end='')
         lapNum += 1
         lastTime = time.time()  # reset the last lap time.
 except KeyboardInterrupt:
