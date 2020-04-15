@@ -12,3 +12,4 @@ automate/automate_online-materials/*
 automate/*/test.py
 *.docx
 exercism/python/*/__pycache__/*
+exercism/python/sieve/sieve2.py
