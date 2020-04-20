@@ -6,7 +6,7 @@ def displayIntro():
     you see two caves. In one cave, the dragon is friendly
     and will share his treasure with you. The other dragon
     is greedy and hungry, and will eat you on sight.''')
-print()
+    print()
 
 def chooseCave():
     cave = ''
