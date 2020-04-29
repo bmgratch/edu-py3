@@ -92,7 +92,7 @@ def main():
                         slideTo = RIGHT
                     elif spotx == blankx and spoty == blanky +1:
                         slideTo = UP
-                    elif spoty == blankx and spoty == blanky -1:
+                    elif spotx == blankx and spoty == blanky -1:
                         slideTo = DOWN
 
             elif event.type == KEYUP:
