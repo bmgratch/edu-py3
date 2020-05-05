@@ -13,3 +13,4 @@ automate/*/test.py
 *.docx
 exercism/python/*/__pycache__/*
 exercism/python/sieve/sieve2.py
+automate/chapter-16/twilio_values.py
