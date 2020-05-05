@@ -1,7 +1,7 @@
 #! python3
 # textMyself.py - Defines the textmyself() function to text a message
 # passed to it as a string
-from twilio_values.py import *
+from twilio_values import *
 
 # preset values
 accountSid = ACCOUNT_SID
