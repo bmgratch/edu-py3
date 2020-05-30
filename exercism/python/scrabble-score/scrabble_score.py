@@ -1,24 +1,20 @@
-SCORE_DICT = {
-    'Q' : 10,
-    'Z' : 10,
-    'J' : 8,
-    'X' : 8,
-    'K' : 5,
-    'F' : 4,
-    'H' : 4,
-    'V' : 4,
-    'W' : 4,
-    'Y' : 4,
-    'B' : 3,
-    'C' : 3,
-    'M' : 3,
-    'P' : 3,
-    'D' : 2,
-    'G' : 2
+SCORES = {
+    ('Q', 'Z') : 10,
+    ('J', 'X') : 8,
+    ('K') : 5,
+    ('F', 'H', 'V', 'W', 'Y') : 4,
+    ('B', 'C', 'M', 'P') : 3,
+    ('D', 'G') : 2
     }
 
 def score(word):
     total = 0
     for w in word.upper():
-        total+= SCORE_DICT.get(w, 1)
+        total+= letterScore(w)
     return total
+
+def letterScore(letter):
+    for key in SCORES:
+        if letter in key:
+            return SCORES[key]
+    return 1
