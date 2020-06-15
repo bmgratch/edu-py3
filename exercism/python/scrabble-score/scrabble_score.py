@@ -8,13 +8,11 @@ SCORES = {
     }
 
 def score(word):
+    letterScore = {}
+    for k, v in SCORES.items():
+        for k0 in k:
+            letterScore[k0] = v
     total = 0
     for w in word.upper():
-        total+= letterScore(w)
+        total+= letterScore[w]
     return total
-
-def letterScore(letter):
-    for key in SCORES:
-        if letter in key:
-            return SCORES[key]
-    return 1
