@@ -14,5 +14,5 @@ def score(word):
             letterScore[k0] = v
     total = 0
     for w in word.upper():
-        total+= letterScore[w]
+        total+= letterScore.get(w, 1)
     return total
