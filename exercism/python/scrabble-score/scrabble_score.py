@@ -10,12 +10,12 @@ SCORES = {
 
 # Construct the dictionary for easier use.
 letterScore = {}
-for k, v in SCORES.items():
-    for k0 in k:
-        letterScore[k0] = v
+for key, val in SCORES.items():
+    for key0 in key:
+        letterScore[key0] = val
 
 def score(word):
     total = 0
-    for w in word.upper():
-        total+= letterScore.get(w, 1)
+    for letter in word.upper():
+        total+= letterScore.get(letter, 1)
     return total
