@@ -5,6 +5,17 @@
 {% endblock %}
 
 {% block body %}
+<hr>
+<h2> Create New Blog Post:</h2>
+<form action='/posts', method='POST'>
+    Title: <input type='text' name='title' id='title'>
+    <br>
+    Post: <input type='text' name='content' id='content'>
+    <br>
+    Author: <input type='text' name='author' id='author'>
+    <input type='submit' value='Post'>
+</form>
+<hr>
 <h1>All Posts</h1>
 
     {% for post in posts %}
