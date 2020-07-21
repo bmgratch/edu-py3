@@ -9,14 +9,17 @@ class Garden:
     def __init__(self, diagram, students=STUDENTS):
         self.students = sorted(students)
         self.diagram = diagram.split('\n')
+        self.plots = {}
+        plot_max = len(self.diagram[0])//2
+        for plot in range(0, plot_max):
+            self.plots[self.students[plot]] = [
+                self.diagram[0][plot*2],
+                self.diagram[0][(plot*2)+1],
+                self.diagram[1][plot*2],
+                self.diagram[1][(plot*2)+1]]
+            
 
     def plants(self, student):
-        if student not in self.students:
+        if student not in self.plots.keys():
             return None
-        else:
-            plot = self.students.index(student)*2
-        seeds = [self.diagram[0][plot],
-                 self.diagram[0][plot+1],
-                 self.diagram[1][plot],
-                 self.diagram[1][plot+1]]
-        return [SEEDS[seed] for seed in seeds]
+        return [SEEDS[seed] for seed in self.plots[student]]
