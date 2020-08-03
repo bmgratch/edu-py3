@@ -3,16 +3,15 @@ class Luhn:
         self.card_num = card_num
 
     def valid(self):
-        strip_num = self.card_num.replace(' ', '')[::-1]
-        if len(strip_num) < 2 or not strip_num.isdigit():
+        # This will fail validation if it has non-digits or is too short
+        if len(self.card_num.replace(' ','')) < 2 or not self.card_num.replace(' ','').isdigit():
             return False
-        checksum = 0
-        for idx, num in enumerate(strip_num):
-            if idx % 2 == 0:
-                checksum += int(num)
-            elif int(num) * 2 > 9:
-                checksum += (int(num) * 2) - 9
+
+        strip_num = [int(num) for num in self.card_num.replace(' ', '')[::-1]]
+
+        for idx, num in enumerate(strip_num[1::2]):
+            if num * 2 > 9:
+                strip_num[idx*2 +1] = num * 2 - 9
             else:
-                checksum += int(num) * 2
-            print(checksum)
-        return checksum % 10 == 0
+                strip_num[idx*2 +1] = num * 2
+        return sum(strip_num) % 10 == 0
