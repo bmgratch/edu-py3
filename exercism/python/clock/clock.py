@@ -7,7 +7,7 @@ class Clock:
         return f'{self.hour:0>2}:{self.minute:0>2}'
 
     def __eq__(self, other):
-        pass
+        return self.hour == other.hour and self.minute == other.minute
 
     def __add__(self, minutes):
         new_min = self.minute + minutes
@@ -24,7 +24,3 @@ class Clock:
             new_hr -= new_min // 60
             new_min %= 60
         return Clock(new_hr, new_min)
-
-## tests
-clock = Clock(6,15)
-print (clock - 3005)
