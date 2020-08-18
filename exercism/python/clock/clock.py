@@ -10,17 +10,7 @@ class Clock:
         return self.hour == other.hour and self.minute == other.minute
 
     def __add__(self, minutes):
-        new_min = self.minute + minutes
-        new_hr = self.hour
-        if new_min > 60:
-            new_hr += new_min // 60
-            new_min %= 60
-        return Clock(new_hr, new_min)
+        return Clock(self.hour, self.minute + minutes)
 
     def __sub__(self, minutes):
-        new_min = self.minute - minutes
-        new_hr = self.hour
-        if new_min > 60:
-            new_hr -= new_min // 60
-            new_min %= 60
-        return Clock(new_hr, new_min)
+        return Clock(self.hour, self.minute - minutes)
